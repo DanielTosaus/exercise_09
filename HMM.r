@@ -10,7 +10,7 @@ HMM <- function(N, M, A, B, pi){
       # with emission probability and transition probability
       # from the start to each possible state
       if(i == 1){
-        P[i,j] <- A[j,i] + B[j,i]
+        P[i,j] <- pi[j] + B[j,i]
       }
       else{
         # We have to loop for every state to form the 
